@@ -25,3 +25,6 @@ int a e int i los define como enteros y se inicializa con valores 5 y 3 respecti
 * El resultado da 3
 * Se le asigna a result el valor 3
 
+DEMOSTRACIÓN POR CONSOLA:
+
+![img.png](img.png)
