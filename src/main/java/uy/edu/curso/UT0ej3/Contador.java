@@ -27,4 +27,13 @@ public class Contador {
         }
         while (contador <= MAX_CONT); // Después se verifica la condición.
     }
+    public void ForContador ()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            System.out.println(i);
+        }
+
+        contador = 0;
+    }
 }
