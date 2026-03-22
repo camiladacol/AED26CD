@@ -2,38 +2,55 @@ package uy.edu.curso.UT0ej3;
 
 public class Contador {
 
-    final int MAX_CONT = 10; // El final se usa para indicar que algo no puede modificarse.
-    int sube = 1; // Define de cuánto en cuánto aumenta el contador. De uno en uno
-    int contador = 0;
+    final int MAX_CONT = 10; // El final se usa para indicar que algo no puede modificarse. Se crea una constante llamada MAX_CONT con valor 10.
+    int incremento = 1; // Define de cuánto en cuánto aumenta el contador. De uno en uno
+    int contador = 0; // Guarda el valor actual del contador, inicia en 0
+    static int totalObjetos  = 0; // Atributo static
+
+    // Constructor
+    public Contador() {
+        totalObjetos++; // Cada vez que se crea un objeto, aumenta el valor
+    }
 
     // Contador con WHILE
-    public void WhileContador() //Método
+    public void whileContador() //Método que realiza el conteo usando while
     {
         contador = 0; // Se reinicia el contador para empezar desde 0.
 
         while (contador <= MAX_CONT) // Mientras contador sea menor o igual a MAX_CONT
         {
-            System.out.println("While: " + contador); // Imprime el valor actual.
-            contador += sube;
+            System.out.println("While: " + contador); // Imprime el valor actual del contador
+            contador += incremento;  //Incrementa el contador de 1 en 1
         }
     }
     // Contador con DO WHILE
-    public  void DoWhileContador() {
+    public  void doWhileContador() {
         contador = 0;
         do // Ejecuta primero el código
         {
             System.out.println("DoWhile: " + contador); // Primero imprime y despues incrementa.
-            contador += sube;
+            contador += incremento; //Incrementa el contador de 1 en 1
         }
-        while (contador <= MAX_CONT); // Después se verifica la condición.
+        while (contador <= MAX_CONT); // Después se verifica la condición. Si contador sigue siendo menor o igual a 10, repite.
     }
-    public void ForContador ()
+    // Contador con FOR
+    public void forContador ()
     {
-        for (int i = 0; i < 5; i++)
+        contador = 0; // Se reinicia el contador para empezar desde 0.
+        for (contador = 0; contador <= MAX_CONT; contador += incremento) //Inicia el contador, se presenta la condición para seguir y el aumento del contador
         {
-            System.out.println(i);
+            System.out.println("For: " + contador); // Imprime el valor actual del contador
         }
+    }
+    public static void staticInstancia() {
+        Contador contador1 = new Contador();
+        Contador contado2 = new Contador();
 
-        contador = 0;
+        contador1.contador = 5;
+        contado2.contador = 9;
+
+        System.out.println("Contador de c1: " + contador1.contador);
+        System.out.println("Contador de c2: " + contado2.contador);
+        System.out.println("Total de objetos creados: " + Contador.totalObjetos);
     }
 }

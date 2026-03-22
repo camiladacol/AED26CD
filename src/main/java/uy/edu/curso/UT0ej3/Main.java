@@ -10,20 +10,26 @@ public class Main {
         System.out.println("1 - While");
         System.out.println("2 - Do While");
         System.out.println("3 - For");
+        System.out.println("4 - Static e Instancia");
 
         int opcion = n1.nextInt();
         switch (opcion)
         {
             case 1:
-                contador.WhileContador();
+                contador.whileContador();
                 break;
             case 2:
-                contador.DoWhileContador();
+                contador.doWhileContador();
                 break;
             case 3:
-                contador.ForContador();
+                contador.forContador();
+                break;
+            case 4:
+                Contador.staticInstancia();
+                break;
             default:
-                System.out.println("Opcion incorrecta");
+                System.out.println("Opcion incorrecta, seleccione un número dentro del menú");
+                break;
         }
 
     }

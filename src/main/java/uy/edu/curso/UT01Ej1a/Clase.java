@@ -1,4 +1,4 @@
-package uy.edu.curso.UT01Ej1a;
+/*package uy.edu.curso.UT01Ej1a;
 
 public class Clase {
     public static int enRango (int [], int bajo, int alto) {
@@ -10,3 +10,4 @@ public class Clase {
                 for (int i = 0)
     }
 }
+*/
