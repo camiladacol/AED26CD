@@ -9,7 +9,7 @@ public class Lista<T>
         this.primeroEnLista = null;
     }
 
-    public void agregar(T valor)
+    public void agregar(T valor) // Agrega un elemento al final de la lista
     {
         Nodo<T> nuevo = new Nodo<>(valor);
         if (primeroEnLista == null) {
@@ -60,5 +60,19 @@ public class Lista<T>
             actual = actual.getSiguiente();
         }
         return contador;
+    }
+
+    public boolean esVacio() // Verifica si la lista esta vacía
+    {
+        return primeroEnLista == null;
+    }
+
+    public void armarEnLista() // Lista todos los elementos, uno arriba del otro
+    {
+        Nodo<T> actual = primeroEnLista;
+        while (actual != null) {
+            System.out.println(actual.getValor());
+            actual = actual.getSiguiente();
+        }
     }
 }
